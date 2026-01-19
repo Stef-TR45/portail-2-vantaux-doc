@@ -4,24 +4,71 @@
   <meta charset="UTF-8">
   <title>Documentation Portail 2 Vantaux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <style>
+    :root {
+      --theme-color: #42b983;
+      --sidebar-width: 280px;
+      --sidebar-background: #1e1e1e;
+      --sidebar-nav-link-color: #b4b4b4;
+      --sidebar-nav-link-color--active: #42b983;
+      --sidebar-nav-link-font-weight--active: bold;
+      --base-background-color: #0d1117;
+      --cover-background-color: #0d1117;
+    }
+    body {
+      background-color: #0d1117;
+    }
+    .sidebar-nav > ul > li > a {
+      font-weight: 600;
+    }
+    .markdown-section table {
+      display: table;
+      width: 100%;
+    }
+    .markdown-section table th,
+    .markdown-section table td {
+      border: 1px solid #30363d;
+    }
+    .markdown-section table tr:nth-child(2n) {
+      background-color: #161b22;
+    }
+    .markdown-section code {
+      background-color: #21262d;
+      color: #79c0ff;
+    }
+    .markdown-section pre {
+      background-color: #161b22;
+    }
+    blockquote {
+      border-left: 4px solid #42b983;
+      background-color: #161b22;
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">Chargement...</div>
   <script>
     window.$docsify = {
-      name: 'Portail 2 Vantaux',
-      repo: '',
+      name: '📖 Portail 2 Vantaux',
+      nameLink: '/',
+      homepage: 'README.md',
       loadSidebar: true,
-      subMaxLevel: 2,
+      subMaxLevel: 3,
+      auto2top: true,
       search: {
         placeholder: 'Rechercher...',
         noData: 'Aucun résultat',
         paths: 'auto'
+      },
+      pagination: {
+        previousText: '← Précédent',
+        nextText: 'Suivant →'
       }
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
 </body>
 </html>
